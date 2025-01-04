@@ -3,5 +3,6 @@
 - The leash is displayed visually and the dog player is tied to the normal player with a rope animation. 
 - The command is mainly used for role-playing scenarios in which, for example, dogs are leashed to their owners. 
 - The code also contains a function for removing the leash if it is already active.
+- symbolic image
 
 ![image](https://github.com/user-attachments/assets/ac9ceb3b-aadf-49d0-95f3-91e27e8c83a6)
