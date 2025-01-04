@@ -13,4 +13,4 @@ The leash is displayed visually and the player is attached to the target player 
 The command is primarily used for role-playing scenarios in which, for example, dogs are leashed to their owners. 
 The code also contains a function for removing the leash if it is already active.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/ac9ceb3b-aadf-49d0-95f3-91e27e8c83a6)
