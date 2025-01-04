@@ -12,3 +12,5 @@ When another player is within a certain range, the player can create a tether an
 The leash is displayed visually and the player is attached to the target player with a rope animation. 
 The command is primarily used for role-playing scenarios in which, for example, dogs are leashed to their owners. 
 The code also contains a function for removing the leash if it is already active.
+
+![Uploading image.png…]()
