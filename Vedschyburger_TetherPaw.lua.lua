@@ -7,10 +7,10 @@
 -- This code is provided "as is".
 -- No liability is accepted for any damage or loss of data resulting from the use of this code.
 --
--- This code implements a command in FiveM (GTA V Multiplayer Mod) that allows a player character to be “tethered” to another player using a rope. 
--- When another player is within a certain range, the player can create a tether and attach it to the target player. 
--- The leash is displayed visually and the player is attached to the target player with a rope animation. 
--- The command is primarily used for role-playing scenarios in which, for example, dogs are leashed to their owners. 
+-- This code implements a command in FiveM (GTA V Multiplayer Mod) that allows a normal player character to “tether” a dog character to themselves with a rope. 
+-- When the dog player is within a certain radius, the normal player can create a leash and tie it to the dog player. 
+-- The leash is displayed visually and the dog player is tied to the normal player with a rope animation. 
+-- The command is mainly used for role-playing scenarios in which, for example, dogs are leashed to their owners. 
 -- The code also contains a function for removing the leash if it is already active.
 --
 -- MIT License
@@ -26,6 +26,7 @@
 -- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
 -- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
 -- ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 
 local leashed = false  -- Tracks if the player is currently leashed
 local targetPlayer = nil  -- Stores the player being leashed
@@ -68,7 +69,7 @@ RegisterCommand("leine", function()
                 -- Attach the player to the target player (leashing action)
                 AttachEntityToEntity(playerPed, targetPlayer, 0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, false, false, false, false, 2, true)
                 StartLeashAnimation(playerPed)  -- Start leash animation
-                ESX.ShowNotification("Du hast die Leine angebracht.")  -- Show notification that leash is applied
+                ESX.ShowNotification("You have attached the leash.")  -- Show notification that leash is applied
                 leashed = true  -- Mark as leashed
             else
                 -- Unleash process
@@ -80,16 +81,16 @@ RegisterCommand("leine", function()
                     DeleteRope(ropeHandle)  -- Delete the rope if it exists
                 end
                 ClearPedTasksImmediately(playerPed)  -- Clear player tasks (animations)
-                ESX.ShowNotification("Die Leine wurde entfernt.")  -- Show notification that leash is removed
+                ESX.ShowNotification("The leash has been removed.")  -- Show notification that leash is removed
                 leashed = false  -- Mark as unleashed
             end
         else
             -- Show notification if the target is too far away
-            ESX.ShowNotification("Der Hund ist zu weit entfernt, um angeleint zu werden.")
+            ESX.ShowNotification("The dog is too far away to be kept on a lead.")
         end
     else
         -- Show notification if no player is nearby
-        ESX.ShowNotification("Kein Hund in der Nähe.")
+        ESX.ShowNotification("No dog in the vicinity.")
     end
 end, false)
 
@@ -114,7 +115,7 @@ function GetClosestPlayer()
     -- Loop through all players to find the closest one
     for i = 1, #players, 1 do
         local targetPed = GetPlayerPed(players[i])  -- Get the target player's ped
-        if targetPed ~= playerPed then  -- Skip the current player
+        if targetPed ~= playerPed then  -- Skip the current player 
             local targetCoords = GetEntityCoords(targetPed)  -- Get target player's coordinates
             local distance = #(playerCoords - targetCoords)  -- Calculate distance to the target player
 
