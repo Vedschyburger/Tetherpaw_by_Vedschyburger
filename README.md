@@ -4,5 +4,4 @@
 - The command is mainly used for role-playing scenarios in which, for example, dogs are leashed to their owners. 
 - The code also contains a function for removing the leash if it is already active.
 
-[![image](https://github.com/user-attachments/assets/ac9ceb3b-aadf-49d0-95f3-91e27e8c83a6)](https://www.lcpdfr.com/downloads/gta4mods/scripts/1706-vdh-k-9-script/)
-
+![Uploading image.png…]()
