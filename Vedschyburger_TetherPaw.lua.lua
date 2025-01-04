@@ -35,7 +35,7 @@ local ropeHandle = nil  -- Stores the rope handle
 local leashDistance = 5.0  -- Maximum distance for leashing (in meters)
 
 -- Register the leash command
-RegisterCommand("leine", function()
+RegisterCommand("leash", function()
     local playerPed = PlayerPedId()  -- Get the player's character (ped)
     local playerCoords = GetEntityCoords(playerPed)  -- Get the player's current coordinates
     local closestPlayer, closestDistance = GetClosestPlayer()  -- Find the closest player and their distance
