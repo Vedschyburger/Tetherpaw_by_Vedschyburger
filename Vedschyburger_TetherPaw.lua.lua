@@ -16,6 +16,12 @@
 -- NO LIABILITY IS ACCEPTED FOR ANY DAMAGE OR LOSS OF DATA RESULTING FROM THE USE OF THIS CODE.
 
 
+-- This code implements a command in FiveM (GTA V Multiplayer Mod) that allows a normal player character to “tether” a dog character to themselves with a rope. 
+-- When the dog player is within a certain radius, the normal player can create a leash and tie it to the dog player. 
+-- The leash is displayed visually and the dog player is tied to the normal player with a rope animation. 
+-- The command is mainly used for role-playing scenarios in which, for example, dogs are leashed to their owners. 
+-- The code also contains a function for removing the leash if it is already active.
+
 local leashed = false  -- Tracks if the player is currently leashed
 local targetPlayer = nil  -- Stores the player being leashed
 local leashObject = nil  -- Stores the leash object
