@@ -1,31 +1,19 @@
 -- Copyright (c) 2025, Vedschyburger
+-- MIT License
 -- All rights reserved.
 -- My Github: https://github.com/Vedschyburger
 --
--- This code may be freely used, modified, and distributed as long as the above copyright and license text remains unchanged and the main owner (Vedschyburger) is explicitly mentioned in the modified code. Any changes to the code must be clearly documented.
---
--- This code is provided "as is".
--- No liability is accepted for any damage or loss of data resulting from the use of this code.
---
--- This code implements a command in FiveM (GTA V Multiplayer Mod) that allows a normal player character to “tether” a dog character to themselves with a rope. 
--- When the dog player is within a certain radius, the normal player can create a leash and tie it to the dog player. 
--- The leash is displayed visually and the dog player is tied to the normal player with a rope animation. 
--- The command is mainly used for role-playing scenarios in which, for example, dogs are leashed to their owners. 
--- The code also contains a function for removing the leash if it is already active.
---
--- MIT License
---
--- Copyright (c) 2025 Vedschyburger
---
+-- This code may be freely used and modified for personal use, but may not be sold or published in a modified form. The above copyright and license text must remain unchanged and the main owner (Vedschyburger) must be explicitly mentioned in the modified code. Any changes to the code must be clearly documented.
+-- 
 -- Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
--- to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
--- and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+-- to deal in the Software without restriction, including without limitation the rights to use, copy, modify, and merge the Software, subject to the following conditions:
 --
 -- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 --
 -- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
 -- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
 -- ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-- NO LIABILITY IS ACCEPTED FOR ANY DAMAGE OR LOSS OF DATA RESULTING FROM THE USE OF THIS CODE.
 
 
 local leashed = false  -- Tracks if the player is currently leashed
