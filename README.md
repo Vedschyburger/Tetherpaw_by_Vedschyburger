@@ -5,5 +5,4 @@
 - The code also contains a function for removing the leash if it is already active.
 - symbolic image
 
-![image](https://github.com/user-attachments/assets/ac9ceb3b-aadf-49d0-95f3-91e27e8c83a6)
 ![1](https://github.com/user-attachments/assets/b6362840-363b-42a0-be9a-f65645001992)
